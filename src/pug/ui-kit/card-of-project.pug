@@ -1,0 +1,44 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Карточка с проектом';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title Карточка с проектом
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +card-of-project()
+            a(href="#" class="card-of-project__image-link").
+                #[div(class="title-mini") HTML, CSS, wordpress]
+                #[img(class="card-of-project__image"  src="./../img/cardOfProject.jpg" alt="Изображение карточки проекта")]
+            a(href="#" class="card-of-project__title-link") Архитектурное бюро John Doe и партнеры. #[br]Сайт под ключ
+                
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +card-of-project()
+                a(href="#" class="card-of-project__image-link").
+                    #&lsqb;div(class="title-mini") HTML, CSS, wordpress]
+                    #&lsqb;img(class="card-of-project__image"  src="./../img/cardOfProject.jpg" alt="Изображение карточки проекта")&rsqb;
+                a(href="#" class="card-of-project__title-link") Архитектурное бюро John Doe и партнеры. #&lsqb;br&rsqb;Сайт под ключ
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/card-of-project.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            +card-of-project()
+                a(href="#" class="card-of-project__image-link").
+                    #&lsqb;div(class="title-mini") HTML, CSS, wordpress]
+                    #&lsqb;img(class="card-of-project__image"  src="./../img/cardOfProject.jpg" alt="Изображение карточки проекта")&rsqb;
+                a(href="#" class="card-of-project__title-link") Архитектурное бюро John Doe и партнеры. #&lsqb;br&rsqb;Сайт под ключ
