@@ -13,21 +13,15 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +card-of-project()
-            a(href="#" class="card-of-project__image-link").
-                #[div(class="title-mini") HTML, CSS, wordpress]
-                #[img(class="card-of-project__image"  src="./../img/cardOfProject.jpg" alt="Изображение карточки проекта")]
-            a(href="#" class="card-of-project__title-link") Архитектурное бюро John Doe и партнеры. #[br]Сайт под ключ
-                
+        +card-of-project("https://www.google.ru/", "HTML, CSS, wordpress", "./../img/cardOfProject.jpg")
+            p Архитектурное бюро John Doe и партнеры. <br> Сайт под ключ
+
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +card-of-project()
-                a(href="#" class="card-of-project__image-link").
-                    #&lsqb;div(class="title-mini") HTML, CSS, wordpress]
-                    #&lsqb;img(class="card-of-project__image"  src="./../img/cardOfProject.jpg" alt="Изображение карточки проекта")&rsqb;
-                a(href="#" class="card-of-project__title-link") Архитектурное бюро John Doe и партнеры. #&lsqb;br&rsqb;Сайт под ключ
+            +card-of-project("https://www.google.ru/", "HTML, CSS, wordpress", "./../img/cardOfProject.jpg")
+                p Архитектурное бюро John Doe и партнеры. &LT;br&GT; Сайт под ключ
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -37,8 +31,11 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            +card-of-project()
-                a(href="#" class="card-of-project__image-link").
-                    #&lsqb;div(class="title-mini") HTML, CSS, wordpress]
-                    #&lsqb;img(class="card-of-project__image"  src="./../img/cardOfProject.jpg" alt="Изображение карточки проекта")&rsqb;
-                a(href="#" class="card-of-project__title-link") Архитектурное бюро John Doe и партнеры. #&lsqb;br&rsqb;Сайт под ключ
+            mixin card-of-project(vis, textMini, pathToImg)
+                .card-of-project
+                    a(href=vis, class="card-of-project__image-link", target="_blank").
+                        #&lsqb;div(class="title-mini") !&lcub;textMini}]
+                        #&lsqb;img(class="card-of-project__image",  src= pathToImg, alt="Изображение карточки проекта")]
+                    a(href=vis class="card-of-project__title-link", target="_blank")
+                        block
+

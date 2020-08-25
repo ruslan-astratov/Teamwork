@@ -1,4 +1,7 @@
-mixin card-of-project()
+mixin card-of-project(vis, textMini, pathToImg)
     .card-of-project
-        block
-
+        a(href=vis, class="card-of-project__image-link", target="_blank").
+            #[div(class="title-mini") !{textMini}]
+            #[img(class="card-of-project__image",  src= pathToImg, alt="Изображение карточки проекта")]
+        a(href=vis class="card-of-project__title-link", target="_blank")
+            block
