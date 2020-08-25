@@ -1,4 +1,5 @@
-mixin sections-headings()
+mixin sections-headings(text, visit, linkTest)
     .sections-headings
-        block
+        h2 !{text}
+            a(href=visit, class="sections-headings__link")= linkTest
     

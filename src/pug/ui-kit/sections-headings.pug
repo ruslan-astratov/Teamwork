@@ -14,16 +14,14 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +sections-headings()
-            h2 Новые записи в 
-                a(href="", class="sections-headings__link")="блоге"
+        +sections-headings("Новые записи в ", "https://www.google.ru/", "блоге")
+
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +sections-headings()
-                h2 Новые записи в 
-                    a(href="", class="sections-headings__link")="блоге"
+            +sections-headings("Новые записи в ", "https://www.google.ru/", "блоге")
+
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -33,6 +31,8 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin sections-headings()
+            mixin sections-headings(text, visit, linkTest)
                 .sections-headings
-                    block
+                    h2 !&lcub;text}
+                        a(href=visit, class="sections-headings__link")= linkTest
+    
