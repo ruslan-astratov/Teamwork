@@ -1,0 +1,51 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция статус';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция статус
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        section.section-status
+            .section-status__link-wrapper
+                a(href="#" class="section-status__left-link") Свободен для новых проектов
+                p.section-status__desc Рассматриваю предложения по верстке и frontend разработке.    
+                    a(href="#" class="section-status__right-link").
+                        Подробности
+                        <svg class="arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9H15" stroke="#1647ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 4.5L15 9L10.5 13.5" stroke="#1647ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-status.pug                 
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-status.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.section-status
+                .section-status__link-wrapper
+                    a(href="#" class="section-status__left-link") Свободен для новых проектов
+                    p.section-status__desc Рассматриваю предложения по верстке и frontend разработке.    
+                        a(href="#" class="section-status__right-link").
+                            Подробности
+                            &lt;svg class="arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;
+                                &lt;path d="M3 9H15" stroke="#1647ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/&gt;
+                                &lt;path d="M10.5 4.5L15 9L10.5 13.5" stroke="#1647ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/&gt;
+                                &lt;/svg&gt;

@@ -1,0 +1,141 @@
+// Секция Статус
+.section-status {
+  width: 1110px;
+  margin: 0 auto;
+  padding-top: 23px;
+  padding-left: 20px;
+  padding-bottom: 23px;
+
+  background: #f5f7fa;
+  border-radius: 8px;
+}
+
+// Обёртка для ссылок
+.section-status__link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+// Левая ссылка
+.section-status__left-link {
+  padding: 5px 10px;
+  background: #1647ed;
+  border-radius: 3px;
+  margin-right: 20px;
+
+  font-family: $MontserratFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 130%;
+  /* identical to box height, or 17px */
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.section-status__left-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+// .section-status__right-link {
+//   width: 18px;
+//   height: 18px;
+// }
+
+.section-status__desc {
+  display: flex;
+  align-items: center;
+  font-family: $MontserratFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  /* identical to box height, or 21px */
+  align-items: center;
+  color: #1647ed;
+}
+
+.section-status__right-link {
+  position: relative;
+  margin-left: 5px;
+  color: #1647ed;
+}
+
+.section-status__right-link:hover {
+  text-decoration: none;
+}
+
+.section-status__img-wrapper {
+  width: 18px;
+  height: 18px;
+}
+
+.arrow {
+  position: relative;
+  right: -13px;
+}
+// ------------------
+
+// // Секция Статус
+// .section-status {
+//   width: 1110px;
+//   padding-top: 23px;
+//   padding-left: 20px;
+//   padding-bottom: 23px;
+
+//   background: #f5f7fa;
+//   border-radius: 8px;
+// }
+
+// // Обёртка для ссылок
+// .section-status__link-wrapper {
+//   display: flex;
+//   align-items: center;
+// }
+
+// // Левая ссылка
+// .section-status__left-link {
+//   padding: 5px 10px;
+//   background: #1647ed;
+//   border-radius: 3px;
+//   margin-right: 20px;
+
+//   font-family: $MontserratFont;
+//   font-style: normal;
+//   font-weight: bold;
+//   font-size: 13px;
+//   line-height: 130%;
+//   /* identical to box height, or 17px */
+
+//   text-transform: uppercase;
+
+//   color: #ffffff;
+// }
+
+// .section-status__left-link:hover {
+//   color: #ffffff;
+//   text-decoration: none;
+// }
+
+// // Средняя ссылка
+// .section-status__middle-link {
+//   text-decoration: none;
+//   margin-right: 10px;
+// }
+
+// .section-status__middle-link:hover {
+//   text-decoration: none;
+// }
+
+// .section-status__right-link {
+//   width: 18px;
+//   height: 18px;
+// }
+
+// .section-status__img-wrapper {
+//   width: 18px;
+//   height: 18px;
+// }
