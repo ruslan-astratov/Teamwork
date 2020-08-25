@@ -1,10 +1,16 @@
 // Контейнер шапки
 .header-white {
+  width: 100%;
   padding-top: 50px;
   padding-bottom: 41px;
   background-color: #fff;
 
   text-align: center;
+}
+
+// Модификатор шапки - Тёмная тема
+.header-white--inner {
+  background: #eaeff2;
 }
 
 // Заголовок Digital Nomad
