@@ -4,7 +4,7 @@ include ./../mixins/*.pug
 
 
 block variables
-    - var title = 'Шапка сайта. Белая (Для главной страницы сайта)';
+    - var title = 'Шапка сайта. Белая (Для главной страницы сайта) и модификатор с серой темой (для внутренних страниц)';
     - var pageClass = 'body--dashboard';
 
 block content
@@ -12,10 +12,22 @@ block content
     //- Заголовок компонента
     h1.ui-kit__component-title.
         Шапка сайта. Белая (Для главной страницы сайта)
+        и модификатор с серой темой (для внутренних страниц)
 
     //- Демонстрация компонента
     .ui-kit__component-demo
         .header-white
+            h1.header-white__caption Digital Nomad
+            p.header-white__description веб-разработчик, ui/ux дизайнер
+            nav.header-white__nav
+                a(href="#" class="header-white__nav-link") Обо мне
+                a(href="#" class="header-white__nav-link") Портфолио
+                a(href="#" class="header-white__nav-link") Блог
+                a(href="#" class="header-white__nav-link") Контакты
+
+
+    .ui-kit__component-demo
+        .header-white.header-white--inner
             h1.header-white__caption Digital Nomad
             p.header-white__description веб-разработчик, ui/ux дизайнер
             nav.header-white__nav
@@ -38,6 +50,18 @@ block content
     .ui-kit__element-code
         pre.
             .header-white
+                h1.header-white__caption Digital Nomad
+                p.header-white__description веб-разработчик, ui/ux дизайнер
+                nav.header-white__nav
+                    a(href="#" class="header-white__nav-link") Обо мне
+                    a(href="#" class="header-white__nav-link") Портфолио
+                    a(href="#" class="header-white__nav-link") Блог
+                    a(href="#" class="header-white__nav-link") Контакты
+
+            Для отображения серого фона при вёрстке внутренних страниц к классу .header-white необходимо добавить модификатор .header-white--inner 
+
+            Шапка с серым фоном:
+            .header-white.header-white--inner
                 h1.header-white__caption Digital Nomad
                 p.header-white__description веб-разработчик, ui/ux дизайнер
                 nav.header-white__nav
