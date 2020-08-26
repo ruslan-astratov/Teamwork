@@ -1,0 +1,36 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Карточка блога';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Карточка блога
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +card-of-blog("https://github.com/", "./../img/cardOfBlog.jpg", "Как я встретил старого друга в NY и чем это закончилось")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +card-of-blog("https://github.com/", "./../img/cardOfBlog.jpg", "Как я встретил старого друга в NY и чем это закончилось")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/card-of-blog.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin card-of-blog(vis, pathTofil, desc)
+                .card-of-blog
+                    a(class="card-of-blog__img-link", href=vis, target="_blank")
+                        img(class="card-of-blog__img", src= pathTofil, alt="Изображение карточки блога")
+                    a(class="card-of-blog__link", href=vis, target="_blank")=desc

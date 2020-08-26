@@ -1,0 +1,39 @@
+// Белый контейнер-обёртка карточки поста
+.card-of-blog {
+  width: 350px;
+  padding: 31px 30px 40px;
+
+  background: #ffffff;
+  box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+}
+
+// Ссылка-обёртка, содержащая в себе картинку
+.card-of-blog__img-link {
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+// Изображение
+.card-of-blog__img {
+  object-fit: cover;
+}
+
+// Ссылка-текст
+.card-of-blog__link {
+  display: block;
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120%;
+
+  color: #000000;
+
+  transition: all 0.5s ease;
+}
+
+.card-of-blog__link:hover {
+  text-decoration: none;
+  color: #9bc3dc;
+}
