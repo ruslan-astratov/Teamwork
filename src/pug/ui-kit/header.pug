@@ -1,0 +1,68 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+
+block variables
+    - var title = 'Шапка сайта. ';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Шапка сайта.
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ./../sections/header-main.pug
+
+
+    .ui-kit__component-demo
+        include ./../sections/header-inner.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            Вызов белой шапки (с модификатором для белого фона)
+            include ./../sections/header-main.pug
+
+            Вызов шапки серого цвета, для внутренних страниц (без модификатора)
+            include ./../sections/header-inner.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+
+        Шапка с белым фоном
+        sections/header-main.pug
+        |
+        Шапка с серым фоном
+        sections/header-inner.pug
+        
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            Шапка с белым фоном, главная страница
+
+            .header.header--main
+                h1.header__caption Digital Nomad
+                p.header__description веб-разработчик, ui/ux дизайнер
+                nav.header__nav
+                    a(href="#" class="header__nav-link") Обо мне
+                    a(href="#" class="header__nav-link") Портфолио
+                    a(href="#" class="header__nav-link") Блог
+                    a(href="#" class="header__nav-link") Контакты       
+
+
+            Шапка с серым фоном:
+            
+            .header
+                h1.header__caption Digital Nomad
+                p.header__description веб-разработчик, ui/ux дизайнер
+                nav.header__nav
+                    a(href="#" class="header__nav-link") Обо мне
+                    a(href="#" class="header__nav-link") Портфолио
+                    a(href="#" class="header__nav-link") Блог
+                    a(href="#" class="header__nav-link") Контакты  
