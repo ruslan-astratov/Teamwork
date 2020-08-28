@@ -1,0 +1,5 @@
+mixin card-of-blog(title, imgPath, link="#")
+    .card-of-blog
+        a(class="card-of-blog__img-link", href=link, target="_blank")
+            img(class="card-of-blog__img", src= imgPath, alt="Изображение карточки блога")
+        a(class="card-of-blog__link", href=link, target="_blank")=title
