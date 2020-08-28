@@ -1,0 +1,38 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Заголовки секций';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Заголовки секций
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +sections-headings("Новые записи в ", "https://www.google.ru/", "блоге")
+
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +sections-headings("Новые записи в ", "https://www.google.ru/", "блоге")
+
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/sections-headings.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin sections-headings(text, visit, linkTest)
+                .sections-headings
+                    h2 !&lcub;text}
+                        a(href=visit, class="sections-headings__link")= linkTest
+    
