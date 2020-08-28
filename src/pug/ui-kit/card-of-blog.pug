@@ -14,12 +14,12 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +card-of-blog("https://github.com/", "./../img/cardOfBlog.jpg", "Как я встретил старого друга в NY и чем это закончилось")
+        +card-of-blog("Как я встретил старого друга в NY и чем это закончилось", "./../img/cardOfBlog.jpg")
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +card-of-blog("https://github.com/", "./../img/cardOfBlog.jpg", "Как я встретил старого друга в NY и чем это закончилось")
+            +card-of-blog("Как я встретил старого друга в NY и чем это закончилось", "./../img/cardOfBlog.jpg")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -29,8 +29,8 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin card-of-blog(vis, pathTofil, desc)
+            mixin card-of-blog(title, imgPath, link="#")
                 .card-of-blog
-                    a(class="card-of-blog__img-link", href=vis, target="_blank")
-                        img(class="card-of-blog__img", src= pathTofil, alt="Изображение карточки блога")
-                    a(class="card-of-blog__link", href=vis, target="_blank")=desc
+                    a(class="card-of-blog__img-link", href=link, target="_blank")
+                        img(class="card-of-blog__img", src= imgPath, alt="Изображение карточки блога")
+                    a(class="card-of-blog__link", href=link, target="_blank")=title
