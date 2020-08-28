@@ -1,0 +1,47 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция обо мне';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция обо мне
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ./../sections/about-me.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/about-me.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/about-me.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .about-me
+                .about-me__content-wrapper
+                    .about-me__img-wrapper
+                        img(class="about-me__img", src="./../img/nouteimg.jpg", alt="Изображение ноутбука")
+                    .about-me__text-wrapper
+                        h3.about-me__heading обо мне
+                        p.about-me__text.
+                            Занимаюсь разработкой современных сайтов и приложений.
+                            &LT;br&GT; Мне нравится делать интересные и современные &LT;br&GT; проекты.
+                            Этот сайт я сделал в рамках обучения в школе &LT;br&GT; онлайн обучения WebCademy. 
+                            Чуть позже я обновлю в нём &LT;br&GT; свой контент. А пока посмотрите, как тут всё классно!
+                        h3.about-me__heading чем могу быть полезен
+                        ul.about-me__list
+                            li.about-me__list-item Верстка сайтов
+                            li.about-me__list-item Frontend
+                            li.about-me__list-item UI/UX дизайн

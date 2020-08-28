@@ -1,0 +1,108 @@
+// Секция Обо мне
+.about-me {
+  background: #f5f7fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  width: 100%;
+}
+
+// Общая обёртка для блока с картинкой и блока с текстовым контентом
+.about-me__content-wrapper {
+  width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+// Обёртка для изображения
+.about-me__img-wrapper {
+  width: 520px;
+  height: 415px;
+}
+
+// Изображения
+.about-me__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about-me__text-wrapper {
+  width: 540px;
+}
+
+// Заголовки  Обо мне и Чем могу быть полезен
+.about-me__heading {
+  font-family: $MontserratFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 120%;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #000000;
+
+  margin-bottom: 15px;
+}
+
+// Длинный абзац
+.about-me__text {
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 170%;
+
+  color: #000000;
+
+  margin-bottom: 35px;
+}
+
+// Список
+.about-me__list {
+  list-style-type: none;
+  padding-left: 22px;
+
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 150%;
+
+  color: #000000;
+}
+
+// Элементы списка
+.about-me__list-item {
+  position: relative;
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 150%;
+  /* or 33px */
+
+  color: #000000;
+
+  margin-bottom: 20px;
+}
+
+.about-me__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-me__list-item::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  bottom: 13px;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000000;
+}
