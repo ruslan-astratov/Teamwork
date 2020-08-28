@@ -1,12 +1,88 @@
 .footer {
-    width: 600px;
-    padding: 50px 25px;
-    margin: 0 auto;
-    background-color: rgb(20, 82, 93);
-    text-align: center;
-    color: #fff;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 123px;
+  background: #131313;
+}
 
-    @media (min-width: 992px) {
-        width: 400px;
-    }
+// Общий блок - ряд для копирайта и иконок
+.footer__common-block {
+  margin: 0 auto;
+  width: 1110px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+//Блок - для копирайта,   текст    © Юрий Ключевский Создано в WebCademy.ru в 2020 году
+.footer__block-copyright {
+  font-family: $MontserratFont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: #ffffff;
+}
+
+.footer__block-copyright.footer__copyright-name {
+  font-family: $MontserratFont;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: #ffffff;
+  margin: 0;
+}
+
+//Блок - для иконок
+.footer__social-icons-row {
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-icon-yt {
+  width: 30px;
+  height: 21px;
+  margin-right: 31px;
+}
+
+.footer__social-icon-ins {
+  width: 25px;
+  height: 26px;
+  margin-right: 31px;
+}
+
+.footer__social-icon-fb {
+  width: 15px;
+  height: 28px;
+  margin-right: 31px;
+}
+
+.footer__social-icon-vk {
+  width: 30px;
+  height: 18px;
+  margin-right: 31px;
+}
+
+.footer__social-icon-li {
+  width: 25px;
+  height: 25px;
+  margin-right: 31px;
+}
+
+.footer__social-icon-gh {
+  width: 22px;
+  height: 27px;
+}
+
+.link {
+  transition: all 0.4s ease;
+}
+
+.footer-link:hover {
+  .link {
+    fill: #a10d0d;
+  }
 }
