@@ -1,0 +1,61 @@
+// Обёртка карточки
+.card-of-project {
+  padding: 20px 20px 32px;
+  width: 540px;
+
+  background: #ffffff;
+  /* card-shadow */
+
+  box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+}
+
+.card-of-project__image-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+
+.title-mini {
+  position: absolute;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.title-mini {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #000000;
+
+  font-family: $MontserratFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 120%;
+  /* identical to box height, or 16px */
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.card-of-project__title-link {
+  display: block;
+
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 120%;
+  /* or 29px */
+
+  color: #000000;
+}
+
+.card-of-project__title-link:hover {
+  text-decoration: none;
+  color: #000000;
+}
