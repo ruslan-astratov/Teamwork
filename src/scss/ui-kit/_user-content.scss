@@ -19,12 +19,15 @@ $textColor: #000;
     margin: 1em 0 1em;
     color: $titleColor;
   }
-  // h3 {
-  //     font-size: 24px;
-  //     font-weight: 900;
-  //     margin: 1em 0 1em;
-  //     color: $titleColor;
-  // }
+
+
+  h3 {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 1em 0 1em;
+    color: $titleColor;
+  }
+
   h4 {
     font-size: 20px;
     font-weight: 900;
@@ -44,14 +47,6 @@ $textColor: #000;
   }
   color: $titleColor;
 
-  //   p {
-  //     color: $textColor;
-  //     line-height: 2em;
-  //     margin-bottom: 0.9em;
-  //     a {
-  //       color: $active;
-  //     }
-  //   }
 
   em {
     color: rgb(140, 178, 243);
@@ -63,26 +58,18 @@ $textColor: #000;
     margin: 30px 0;
   }
 
-  // ul {
-  //   list-style-type: none;
-  //   line-height: 1.5em;
-  // }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background-color: $active;
+    } //&:before
+  } // li
 
-  // li {
-  //   position: relative;
-  //   margin-bottom: 0.9em;
-
-  //   &:before {
-  //     content: "";
-  //     display: block;
-  //     position: absolute;
-  //     left: -20px;
-  //     top: 10px;
-  //     width: 6px;
-  //     height: 6px;
-  //     background-color: $active;
-  //   } //&:before
-  // } // li
 
   & > h1,
   & > h2,

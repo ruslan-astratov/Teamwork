@@ -1,20 +1,20 @@
-// Контейнер шапки.  По умолчанию у неё серый фон
-.header {
+// Контейнер шапки
+.header-white {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 41px;
+  background-color: #fff;
 
-  background: #eaeff2;
   text-align: center;
 }
 
-// Модификатор шапки - Светлый фон
-.header--main {
-  background-color: #fff;
+// Модификатор шапки - Тёмная тема
+.header-white--inner {
+  background: #eaeff2;
 }
 
 // Заголовок Digital Nomad
-.header__caption {
+.header-white__caption {
   font-family: $headingsFont;
   font-style: normal;
   font-weight: bold;
@@ -27,7 +27,7 @@
 }
 
 // Текст ------- веб-разработчик, ui/ux дизайнер
-.header__description {
+.header-white__description {
   font-family: $MontserratFont;
 
   font-weight: bold;
@@ -44,13 +44,13 @@
 }
 
 // Навигация
-.header__nav {
+.header-white__nav {
   display: flex;
   justify-content: center;
 }
 
 // Ссылки
-.header__nav-link {
+.header-white__nav-link {
   font-family: $MontserratFont;
   font-style: normal;
   font-weight: bold;
@@ -64,11 +64,11 @@
   margin-right: 59px;
 }
 
-.header__nav-link:last-child {
+.header-white__nav-link:last-child {
   margin-right: 0;
 }
 
-.header__nav-link:hover {
+.header-white__nav-link:hover {
   color: rgb(100, 88, 88);
   text-decoration: none;
 }
