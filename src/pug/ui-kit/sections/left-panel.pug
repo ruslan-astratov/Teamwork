@@ -1,3 +1,4 @@
+//- Левая синяя панель в UI ките, в которую подключаю БЛОКИ, СЕКЦИИ и СТРАНИЦЫ
 .left-panel.blue-skin
 	.left-panel__section
 		.left-panel__logo UI-KIT и PUG фреймворк
@@ -9,33 +10,28 @@
 			+linkLeftPanel("Общие рекомендации", "docs-general-recomendations.html")
 			+linkLeftPanel("Оформление кода", "docs-codestyle.html")
 			+linkLeftPanel("Работа со стилями", "docs-styleguide.html")
-	
-	//- Тут будут ссылки на блоки
 
 	//- Cсылки на блоки
-
 	.left-panel__section
-		.left-panel__title Блоки
+		.left-panel__title Блоки/Миксины
 		.left-panel-nav
-			+linkLeftPanel("Подвал сайта", "footer.html")
-			+linkLeftPanel("Шапка сайта", "header.html")
+
 			+linkLeftPanel("Заголовки секций", "sections-headings.html")
 			+linkLeftPanel("Большой аватар", "avatar-big.html")
 			+linkLeftPanel("Карточка с проектом", "card-of-project.html")
+			+linkLeftPanel("Карточка блога", "card-of-blog.html")
+	
+	.left-panel__section
+		.left-panel__title СЕКЦИИ
+		.left-panel-nav
+			+linkLeftPanel("Подвал сайта", "footer.html")
+			+linkLeftPanel("Шапка сайта", "header.html")
 			+linkLeftPanel("Секция статус", "section-status.html")
 			+linkLeftPanel("Секция Обо мне", "about-me.html")
-			+linkLeftPanel("Карточка блога", "card-of-blog.html")
-
+	//- Ссылки на готовые страницы
 	.left-panel__section
-		.left-panel__title Страницы
+		.left-panel__title Собранные страницы
 		.left-panel-nav
-			+linkLeftPanel("Главная страница - сборка", "./../page-main.html")
+			+linkLeftPanel("Главная страница", "./../page-main.html")
 
-
-//- Выше - ссылки на страницы
-
-	//- //- Cсылки на Секции
-	//- .left-panel__section
-	//- 	.left-panel__title Секции
-	//- 	.left-panel-nav
 
