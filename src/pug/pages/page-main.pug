@@ -1,0 +1,30 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Главная страница - сборка';
+    - var pageClass= "";
+
+block content
+    include ./../sections/header/header-main.pug
+    main
+        .about-me-wrapper
+            include ./../sections/about-me.pug
+        .section-status-wrapper
+            include ./../sections/section-status.pug
+        .portfolio-collection
+            .portfolio-collection__heading-wr
+                +sections-headings("Новые проекты в ", "https://www.google.ru/", "портфолио")
+            .portfolio-collection__card-wr
+                +card-of-project("https://www.google.ru/", "./../img/cardOfProject.jpg", "HTML, CSS, wordpress", "Архитектурное бюро John Doe и партнеры. Сайт под ключ")
+                +card-of-project("https://www.google.ru/", "./../img/cardOfProject2.jpg", "HTML, CSS, JS, React", "Сайт о спасении черепах и морской фауны. Верстка и frontend")
+                +card-of-project("https://www.google.ru/", "./../img/cardOfProject3.jpg", "Figma, HTML, CSS, PHP", "Квадрокоптер Phantom от Dji company. Сайт под ключ")
+                +card-of-project("https://www.google.ru/", "./../img/cardOfProject4.jpg", "HTML, CSS, wordpress", "Верстка сайта для газеты “Вечерний Лондон”")
+        .blog-posts-collection
+            .blog-posts-collection__heading-wr
+                +sections-headings("Новые записи в ", "https://www.google.ru/", "блоге")
+            .blog-posts-collection__card-wr
+                +card-of-blog("Как я встретил старого друга в NY и чем это закончилось", "./../img/cardOfBlog.jpg")
+                +card-of-blog("Парусный спорт. 10 правил для начинающего", "./../img/cardOfBlog2.jpg")
+                +card-of-blog("Мое рабочее место и аксессуары в 2020 году", "./../img/cardOfBlog3.jpg")
+    include ./../sections/footer.pug

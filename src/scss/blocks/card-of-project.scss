@@ -51,11 +51,12 @@
   font-size: 24px;
   line-height: 120%;
   /* or 29px */
-
   color: #000000;
+
+  transition: all 0.4s ease;
 }
 
 .card-of-project__title-link:hover {
   text-decoration: none;
-  color: #000000;
+  color: rgb(63, 110, 211);
 }

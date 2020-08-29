@@ -1,0 +1,21 @@
+.blog-posts-collection {
+  width: 1110px;
+  margin: 0 auto;
+
+  margin-bottom: 90px;
+}
+
+// Обёртка для заголовка
+.blog-posts-collection__heading-wr {
+  margin-bottom: 76px;
+}
+
+// Флекс контейнер для карточек с постами
+.blog-posts-collection__card-wr {
+  display: flex;
+  //   flex-wrap: wrap;
+}
+
+.blog-posts-collection__card-wr .card-of-blog {
+  margin-right: 30px;
+}

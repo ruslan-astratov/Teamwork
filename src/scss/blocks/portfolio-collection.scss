@@ -1,0 +1,29 @@
+.portfolio-collection {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+// Дополнительная обёртка для ЗАГОЛОВКА в блоке с карточками
+.portfolio-collection__heading-wr {
+  margin-bottom: 45px;
+}
+
+// Обёртка для карточек - флекс контейнер
+.portfolio-collection__card-wr {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 76px;
+}
+
+.portfolio-collection__card-wr .card-of-project {
+  &:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 40px;
+}
