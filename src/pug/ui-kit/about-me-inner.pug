@@ -1,0 +1,49 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция "Обо мне" на внутренней странице';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция "Обо мне" на внутренней странице
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ./../sections/about-me-inner.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/about-me-inner.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/about-me-inner.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .about-me-inner
+                .about-me-inner__heading-wrapper
+                    +sections-headings-inner("Обо мне")
+                .about-me-inner__content-row
+                    .about-me-inner__avatar-wrapper    
+                        +avatar-big("./../img/avatars/bigUserAvatar2.jpg")
+                    .about-me__text-wrapper
+                        h3.about-me__heading обо мне
+                        p.about-me__text.
+                            Занимаюсь разработкой современных сайтов и приложений.
+                            &LT;br> Мне нравится делать интересные и современные &LT;br> проекты.
+                            Этот сайт я сделал в рамках обучения в школе &LT;br> онлайн обучения WebCademy. 
+                            Чуть позже я обновлю в нём &LT;br> свой контент. А пока посмотрите, как тут всё классно!
+                        h3.about-me__heading чем могу быть полезен
+                        ul.about-me__list
+                            li.about-me__list-item Верстка сайтов
+                            li.about-me__list-item Frontend
+                            li.about-me__list-item UI/UX дизайн
