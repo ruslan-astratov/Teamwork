@@ -1,0 +1,22 @@
+// Секция Обо мне на внутренней странице
+.about-me-inner {
+  width: 920px;
+  margin-left: auto;
+  margin-right: 165px;
+}
+
+// Обёртка для заголовка, дающая отступ вниз
+.about-me-inner__heading-wrapper {
+  margin-left: -184px;
+  margin-bottom: 55px;
+}
+
+// Флекс-контейнер, объединяющий картинку слева и текстовый контент справа
+.about-me-inner__content-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-me-inner__avatar-wrapper {
+  margin-right: 60px;
+}

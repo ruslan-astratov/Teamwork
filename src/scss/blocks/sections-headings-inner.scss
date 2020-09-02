@@ -1,0 +1,14 @@
+.sections-headings-inner {
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 130%;
+  /* or 36px */
+
+  text-align: center;
+}
+
+.sections-headings-inner h2 {
+  font-size: 28px !important;
+}
