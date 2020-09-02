@@ -1,22 +1,22 @@
-.portfolio-collection {
+.main-page__blog {
   width: 1110px;
   margin: 0 auto;
 }
 
 // Дополнительная обёртка для ЗАГОЛОВКА в блоке с карточками
-.portfolio-collection__heading-wr {
+.main-page__blog-heading-wrapper {
   margin-bottom: 45px;
 }
 
 // Обёртка для карточек - флекс контейнер
-.portfolio-collection__card-wr {
+.main-page__blog-card-wrapper {
   display: flex;
   flex-wrap: wrap;
 
   margin-bottom: 76px;
 }
 
-.portfolio-collection__card-wr .card-of-project {
+.main-page__blog-card-wrapper .card-of-project {
   &:nth-child(odd) {
     margin-right: 30px;
   }

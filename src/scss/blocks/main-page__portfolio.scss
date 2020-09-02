@@ -1,0 +1,25 @@
+.main-page__portfolio {
+  width: 1110px;
+  margin: 0 auto;
+
+  margin-bottom: 90px;
+}
+
+// Обёртка для заголовка
+.main-page__portfolio-heading-wrapper {
+  margin-bottom: 76px;
+}
+
+// Флекс контейнер для карточек с постами
+.main-page__portfolio-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-page__portfolio-card-wrapper .card-of-blog {
+  margin-right: 30px;
+}
+
+.main-page__portfolio-card-wrapper .card-of-blog:last-child {
+  margin-right: 0;
+}
