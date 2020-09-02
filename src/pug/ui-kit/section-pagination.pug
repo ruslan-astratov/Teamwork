@@ -1,0 +1,38 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция Пагинация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция Пагинация
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ./../sections/section-pagination.pug 
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-pagination.pug                 
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-pagination.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.section-pagination
+                +pagination-item("назад")
+                +pagination-item("1")
+                +pagination-item("2")
+                +pagination-item("3")
+                +pagination-item("вперёд")
+                            
