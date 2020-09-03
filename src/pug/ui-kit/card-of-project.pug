@@ -13,13 +13,17 @@ block content
 
     //- Демонстрация компонента
     .ui-kit__component-demo
-        +card-of-project("https://www.google.ru/", "./../img/cardOfProject.jpg", "HTML, CSS, wordpress", "Архитектурное бюро John Doe и партнеры. <br> Сайт под ключ")
+        +card-of-project(
+            "Архитектурное бюро John Doe и партнеры. Сайт под ключ",
+            "./../img/card-of-project/card-of-project-01.jpg", 
+            "https://www.google.ru/", 
+            "HTML, CSS, wordpress")
 
 
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +card-of-project("https://www.google.ru/", "./../img/cardOfProject.jpg", "HTML, CSS, wordpress", "Архитектурное бюро John Doe и партнеры. <br> Сайт под ключ")
+            +card-of-project("Архитектурное бюро John Doe и партнеры. Сайт под ключ", "./../img/card-of-project/card-of-project-01.jpg", "https://www.google.ru/", "HTML, CSS, wordpress")
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -29,9 +33,9 @@ block content
     //- Распечатка кода компонента
     .ui-kit__element-code
         pre.
-            mixin card-of-project(lnk, imgPath, badgeText, link)
+            mixin card-of-project(title, imgPath, badgeText, link)
                 .card-of-project
-                    a(href=lnk, class="card-of-project__image-link", target="_blank").
+                    a(href=link, class="card-of-project__image-link", target="_blank").
                         #&lsqb;div(class="title-mini") !&lcub;badgeText}]
                         #&lsqb;img(class="card-of-project__image",  src= imgPath, alt="Изображение карточки проекта")]
-                    a(href=link class="card-of-project__title-link", target="_blank") !&lcub;link}
+                    a(href=link class="card-of-project__title-link", target="_blank")=title 

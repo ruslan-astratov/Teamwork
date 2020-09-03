@@ -1,17 +1,34 @@
+//- Собираю главную страницу
 extends ../layouts/page-layout.pug
 include ./../mixins/*.pug
 
 block variables
     - var title = 'Главная страница';
-    - var pageClass= "index-page";
+    - var pageClass= "";
 
 block content
-    header.header
-        
 
-    include ./../sections/section.pug
-    include ./../sections/section-experience.pug  
+    include ./../sections/header/header-main.pug
+    main.main-page
+        .main-page__about-me
+            include ./../sections/about-me.pug
+        .main-page__status
+            include ./../sections/section-status.pug
+        //- .main-page__blog
+        .main-page__blog
+            .main-page__blog-heading-wrapper
+                +sections-headings("Новые проекты в ", "https://www.google.ru/", "портфолио")
+            .main-page__blog-card-wrapper
+                +card-of-project("Архитектурное бюро John Doe и партнеры. Сайт под ключ", "./../img/card-of-project/card-of-project-01.jpg", "https://www.google.ru/", "HTML, CSS, wordpress")
+                +card-of-project("Сайт о спасении черепах и морской фауны. Верстка и frontend", "./../img/card-of-project/card-of-project-02.jpg","https://www.google.ru/", "HTML, CSS, JS, React")
+                +card-of-project("Квадрокоптер Phantom от Dji company. Сайт под ключ", "./../img/card-of-project/card-of-project-03.jpg","https://www.google.ru/", "Figma, HTML, CSS, PHP")
+                +card-of-project("Верстка сайта для газеты “Вечерний Лондон","./../img/card-of-project/card-of-project-04.jpg", "https://www.google.ru/", "HTML, CSS, wordpress")
+        .main-page__portfolio
+            .main-page__portfolio-heading-wrapper
+                +sections-headings("Новые записи в ", "https://www.google.ru/", "блоге")
+            .main-page__portfolio-card-wrapper
+                +card-of-blog("Как я встретил старого друга в NY и чем это закончилось", "./../img/post-card/post-card-01.jpg")
+                +card-of-blog("Парусный спорт. 10 правил для начинающего", "./../img/post-card/post-card-02.jpg")
+                +card-of-blog("Мое рабочее место и аксессуары в 2020 году", "./../img/post-card/post-card-03.jpg")
+    include ./../sections/footer.pug
 
-
-    footer.footer
-        h1 Footer

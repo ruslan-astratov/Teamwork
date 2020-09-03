@@ -7,6 +7,15 @@
 }
 
 .sections-headings .sections-headings__link {
+  display: inline-block;
   color: #000;
-  text-decoration: underline;
+  border-bottom: 1px solid black;
+  transition: all 0.4s ease;
+  // text-decoration: underline;
+}
+
+.sections-headings__link:hover {
+  text-decoration: none;
+  color: rgb(134, 20, 20);
+  border-bottom: 1px solid rgb(134, 20, 20);
 }

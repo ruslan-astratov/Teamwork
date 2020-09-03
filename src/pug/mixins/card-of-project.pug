@@ -1,14 +1,19 @@
-mixin card-of-project(lnk, imgPath, badgeText, link)
+//- Карточка проекта
+//- mixin card-of-project(link, imgPath, badgeText, link)
+mixin card-of-project(title, imgPath, badgeText, link)
     .card-of-project
-        a(href=lnk, class="card-of-project__image-link", target="_blank").
+        a(href=link, class="card-of-project__image-link", target="_blank").
             #[div(class="title-mini") !{badgeText}]
             #[img(class="card-of-project__image",  src= imgPath, alt="Изображение карточки проекта")]
-        a(href=link class="card-of-project__title-link", target="_blank") !{link}
+        a(href=link class="card-of-project__title-link", target="_blank")=title 
             
-//- mixin card-of-project(vis, textMini, pathToImg)
+
+
+//- //- Карточка проекта
+//- mixin card-of-project(link, imgPath, badgeText, link)
 //-     .card-of-project
-//-         a(href=vis, class="card-of-project__image-link", target="_blank").
-//-             #[div(class="title-mini") !{textMini}]
-//-             #[img(class="card-of-project__image",  src= pathToImg, alt="Изображение карточки проекта")]
-//-         a(href=vis class="card-of-project__title-link", target="_blank")
-//-             block
+//-         a(href=link, class="card-of-project__image-link", target="_blank").
+//-             #[div(class="title-mini") !{badgeText}]
+//-             #[img(class="card-of-project__image",  src= imgPath, alt="Изображение карточки проекта")]
+//-         a(href=link class="card-of-project__title-link", target="_blank") !{link}
+            
