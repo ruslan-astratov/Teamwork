@@ -1,0 +1,28 @@
+.section-skills {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+// Обёртка для заголовка секции
+.section-skills__heading-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sections-headings h2 {
+  font-size: 28px;
+}
+
+// Ряд - флекс контейнер для карточек с навыками
+.skill-cards__row {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-cards__row .skill-card {
+  margin-right: 30px;
+}
+
+.skill-cards__row .skill-card:last-child {
+  margin-right: 0;
+}

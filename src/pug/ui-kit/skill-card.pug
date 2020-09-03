@@ -1,0 +1,37 @@
+//- Миксин карточки с навыками
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Миксин карточки с навыками';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Миксин карточки с навыками
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +skill-card("./../img/skill-01.jpg", "UI/UX design")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +skill-card("./../img/skill-01.jpg", "UI/UX design")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/skill-card.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin skill-card(source, text)
+                .skill-card
+                    .skill-card__img-wrapper
+                        img(src=source, class="skill-card__img", alt="Изображение карточки")
+                    span.skill-card__card-descr= text

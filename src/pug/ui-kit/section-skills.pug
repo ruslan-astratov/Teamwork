@@ -1,0 +1,42 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция Навыки';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция Навыки
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ./../sections/section-skills.pug 
+
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-skills.pug             
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-skills.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            section.section-skills
+                .section-skills__heading-wrapper
+                    +sections-headings-inner("Навыки")
+                .skill-cards__row
+                    +skill-card("./../img/skill-01.jpg", "UI/UX design")
+                    +skill-card("./../img/skill-02.jpg", "HTML5")
+                    +skill-card("./../img/skill-03.jpg", "CSS3")
+                    +skill-card("./../img/skill-04.jpg", "JS")
+                    +skill-card("./../img/skill-05.jpg", "PHP")
+                    +skill-card("./../img/skill-06.jpg", "WordPress")

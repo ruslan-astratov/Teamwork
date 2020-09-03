@@ -1,0 +1,28 @@
+// Миксин - Карточка с навыками
+.skill-card {
+  width: 160px;
+}
+
+.skill-card__img-wrapper {
+  margin-bottom: 20px;
+}
+
+.skill-card__img {
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.skill-card__card-descr {
+  display: block;
+
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  text-align: center;
+
+  color: #000000;
+}
