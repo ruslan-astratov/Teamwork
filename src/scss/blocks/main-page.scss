@@ -1,0 +1,84 @@
+.main {
+  width: 600px;
+  padding: 50px 25px;
+  margin: 0 auto;
+  background-color: rgb(230, 214, 65);
+  text-align: center;
+
+  @media (min-width: 992px) {
+    width: 400px;
+  }
+}
+
+// main-page__about-me.scss
+.main-page__about-me {
+  margin-bottom: 60px;
+}
+// main-page__about-me.scss  /////////////////////////////
+
+// main-page__blog.scss
+.main-page__blog {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+// Дополнительная обёртка для ЗАГОЛОВКА в блоке с карточками
+.main-page__blog-heading-wrapper {
+  margin-bottom: 45px;
+}
+
+// Обёртка для карточек - флекс контейнер
+.main-page__blog-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 76px;
+}
+
+.main-page__blog-card-wrapper .card-of-project {
+  &:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 40px;
+}
+
+// main-page__blog.scss ///
+
+// main-page__portfolio.scss
+.main-page__portfolio {
+  width: 1110px;
+  margin: 0 auto;
+
+  margin-bottom: 90px;
+}
+
+// Обёртка для заголовка
+.main-page__portfolio-heading-wrapper {
+  margin-bottom: 76px;
+}
+
+// Флекс контейнер для карточек с постами
+.main-page__portfolio-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-page__portfolio-card-wrapper .card-of-blog {
+  margin-right: 30px;
+}
+
+.main-page__portfolio-card-wrapper .card-of-blog:last-child {
+  margin-right: 0;
+}
+// main-page__portfolio.scss //
+
+// main-page__status.scss
+.main-page__status {
+  margin-bottom: 80px;
+}
+// main-page__status.scss//

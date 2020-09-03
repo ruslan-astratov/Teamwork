@@ -1,8 +1,19 @@
 //- Карточка проекта
-mixin card-of-project(link, imgPath, badgeText, link)
+//- mixin card-of-project(link, imgPath, badgeText, link)
+mixin card-of-project(title, imgPath, badgeText, link)
     .card-of-project
         a(href=link, class="card-of-project__image-link", target="_blank").
             #[div(class="title-mini") !{badgeText}]
             #[img(class="card-of-project__image",  src= imgPath, alt="Изображение карточки проекта")]
-        a(href=link class="card-of-project__title-link", target="_blank") !{link}
+        a(href=link class="card-of-project__title-link", target="_blank")=title 
+            
+
+
+//- //- Карточка проекта
+//- mixin card-of-project(link, imgPath, badgeText, link)
+//-     .card-of-project
+//-         a(href=link, class="card-of-project__image-link", target="_blank").
+//-             #[div(class="title-mini") !{badgeText}]
+//-             #[img(class="card-of-project__image",  src= imgPath, alt="Изображение карточки проекта")]
+//-         a(href=link class="card-of-project__title-link", target="_blank") !{link}
             
