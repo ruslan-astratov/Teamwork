@@ -1,0 +1,33 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Миксин элемента пагинации';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Миксин элемента пагинации
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +pagination-item("назад")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +pagination-item("назад")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/pagination-item.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin pagination-item(text)
+                a(href="https://webcademy.ru/", target="_blank").pagination-item= text
