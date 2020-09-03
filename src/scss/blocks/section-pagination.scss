@@ -1,0 +1,14 @@
+// Секция Пагинации - контейнер для элементов
+
+.section-pagination {
+  display: flex;
+  width: 406px;
+}
+
+.section-pagination .pagination-item {
+  margin-right: 15px;
+}
+
+.section-pagination .pagination-item:last-child {
+  margin-right: 0;
+}
