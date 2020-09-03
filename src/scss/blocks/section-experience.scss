@@ -1,0 +1,172 @@
+// Секция опыт
+.section-experience {
+  width: 1118px;
+  margin: 0 auto;
+}
+
+.section-experience__heading-wrapper {
+  margin-bottom: 60px;
+}
+
+.section-experience__heading-wrapper h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+// Обёртка для мест работы  - блок с ТАЙМЛАЙНОМ
+// .section-experience__timeline-wrapper {
+// }
+
+// РЯД в таймлайне
+.section-experience__timeline-row {
+  display: flex;
+  margin-bottom: 60px;
+  //   background-color: rgb(136, 255, 0);
+}
+.section-experience__timeline-row:last-child {
+  margin-bottom: 0;
+}
+
+// Задал зеркальный вид для каждых НЕЧЕТНЫХ элементов
+.section-experience__timeline-wrapper
+  .section-experience__timeline-row:nth-child(odd) {
+  flex-direction: row-reverse;
+
+  position: relative;
+
+  //   Псевдоэлемент - кружок для всех НЕЧЕТНЫХ элементов
+  &::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    right: 540px;
+    top: 24px;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 6px solid #d9e2ec;
+    box-sizing: border-box;
+  }
+
+  //   Псевдоэлемент - линия таймлайна для всех НЕЧЕТНЫХ элементов
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    right: 553px;
+    top: 56px;
+    width: 6px;
+    z-index: 1;
+    height: 213px;
+
+    background: #d9e2ec;
+
+    box-sizing: border-box;
+  }
+}
+
+.section-experience__timeline-wrapper
+  .section-experience__timeline-row:nth-child(even) {
+  position: relative;
+
+  //   Псевдоэлемент - кружок для всех ЧЕТНЫХ элементов  - 2 4 6
+  &::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    right: 540px;
+    top: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 6px solid #d9e2ec;
+    box-sizing: border-box;
+  }
+
+  // Псевдоэлемент ЛИНИЯ
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    right: 553px;
+    top: 56px;
+    width: 6px;
+    z-index: 1;
+    height: 181px;
+
+    background: #d9e2ec;
+
+    box-sizing: border-box;
+  }
+}
+
+// Псевдоэлемент ЛИНИЯ для ПОСЛЕДНЕГО блока
+.section-experience__timeline-wrapper
+  .section-experience__timeline-row:last-child {
+  &::after {
+    content: "";
+    display: none;
+  }
+}
+
+// Блок с текстовым контентом в ряду
+.section-experience__content-block {
+  width: 505px;
+  //   background-color: rgb(255, 115, 0);
+}
+
+.section-experience__timeline-wrapper
+  .section-experience__timeline-row:nth-child(even) {
+  text-align: right;
+}
+
+// Текст с датой
+.section-experience__date {
+  display: block;
+  font-family: $MontserratFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 120%;
+  /* identical to box height, or 16px */
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #7e9bbd;
+
+  margin-bottom: 10px;
+}
+
+// Заголовок в блоке
+.section-experience__heading {
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 120%;
+  /* or 26px */
+
+  color: #000000;
+
+  margin-bottom: 10px;
+}
+
+// Абзац
+.section-experience__paragraph {
+  font-family: $headingsFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 170%;
+  /* or 31px */
+
+  color: #000000;
+}
